@@ -1,15 +1,18 @@
 import { Component, Input } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  styleUrls: ['./card.component.css'],
+  standalone: true,
+  imports: [CommonModule]
 })
 export class CardComponent {
   @Input() data: any;
 
-  constructor(private sanitizer: DomSanitizer) {}
+  constructor(private sanitizer: DomSanitizer) { }
 
   getDescription(): SafeHtml {
     if (!this.data || !this.data.Description) return '';

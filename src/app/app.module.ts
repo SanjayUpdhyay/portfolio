@@ -16,11 +16,14 @@ import { DataServiceService } from './services/data-service.service';
 import { ThemeService } from './services/theme.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
     LandingComponent,
     AboutComponent,
     ContactComponent,
@@ -29,12 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SkillsComponent,
     ProjectsComponent,
     NavBarComponent,
-    CardComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
+    CardComponent,
     MatDialogModule,
     MatButtonModule
   ],

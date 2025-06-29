@@ -9,11 +9,14 @@ import { ProjectsComponent } from '../projects/projects.component';
 import { ExperienceComponent } from '../experience/experience.component';
 import { EducationComponent } from '../education/education.component';
 import { ContactComponent } from '../contact/contact.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-landing',
-  templateUrl: './landing.component.html',
-  styleUrls: ['./landing.component.css']
+    selector: 'app-landing',
+    templateUrl: './landing.component.html',
+    styleUrls: ['./landing.component.css'],
+    standalone: true,
+    imports: [CommonModule]
 })
 export class LandingComponent implements OnInit {
   aboutDetails: any;
