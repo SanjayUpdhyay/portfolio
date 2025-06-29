@@ -1,6 +1,32 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+A modern, responsive Angular portfolio website showcasing professional experience, skills, projects, and education. Built with a custom responsive design system using CSS variables and desktop-first approach.
+
+## Features
+
+- **Responsive Design**: Desktop-first approach with comprehensive breakpoints (1920px, 1440px, 1280px, 1024px, 768px, 600px, 480px, 375px, 320px)
+- **Custom CSS System**: Uses CSS variables for consistent theming and modular spacing
+- **Theme Support**: Multiple theme modes with smooth transitions
+- **Interactive Components**: Hover effects and animations throughout the interface
+- **Professional Sections**: About, Skills, Experience, Projects, Education, and Contact pages
+- **Social Integration**: Direct links to professional profiles (LinkedIn, GitHub, LeetCode)
+
+## Technology Stack
+
+- **Framework**: Angular 16.2.0
+- **Styling**: Custom CSS with CSS variables and responsive units (rem, em, %, vw, vh)
+- **Icons**: Remixicon
+- **UI Components**: Angular Material
+- **Design System**: Custom responsive design with Flexbox and Grid layouts
+
+## Design Principles
+
+- **Desktop-First**: Designed for large screens first, then adapted for smaller viewports
+- **Responsive Units**: Uses rem, em, %, vw, vh instead of fixed pixels
+- **CSS Variables**: Consistent theming with `--primary-color`, `--text-color`, etc.
+- **Modular Spacing**: Consistent spacing system (0.5rem, 1rem, etc.)
+- **Typography Scale**: Scalable typography based on rem units
+- **Accessibility**: Semantic HTML and keyboard navigation support
 
 ## Development server
 
@@ -13,6 +39,39 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── components/          # Reusable UI components
+│   │   ├── card/           # Card component for consistent styling
+│   │   └── nav-bar/        # Navigation bar component
+│   ├── pages/              # Main page components
+│   │   ├── landing/        # Home page with interactive grid
+│   │   ├── about/          # About section
+│   │   ├── skills/         # Skills showcase
+│   │   ├── experience/     # Work experience timeline
+│   │   ├── projects/       # Project portfolio
+│   │   ├── education/      # Educational background
+│   │   └── contact/        # Contact information
+│   └── services/           # Data and theme services
+├── assets/
+│   ├── fonts/              # Custom font files
+│   ├── Img/                # Social media icons and images
+│   ├── logos/              # Company and institution logos
+│   └── Skills/             # Technology skill icons
+```
+
+## Styling Guidelines
+
+- Use CSS variables for colors and spacing
+- Follow the modular spacing system
+- Implement responsive breakpoints only where necessary
+- Use Flexbox or Grid for layouts
+- Ensure smooth transitions and hover effects
+- Maintain accessibility standards
 
 ## Running unit tests
 

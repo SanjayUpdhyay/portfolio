@@ -1,0 +1,255 @@
+/* Custom scrollbar styles */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Background overlay for better text readability */
+  .rounded-\[3\.2rem\]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    z-index: 1;
+  }
+  
+  /* Ensure content stays above the overlay */
+  .rounded-\[3\.2rem\] > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Hover effects for cards */
+  .space-y-8 > div {
+    transition: transform 0.3s ease;
+  }
+  
+  .space-y-8 > div:hover {
+    transform: translateX(10px);
+  }
+  
+  /* Text shadow for better readability */
+  .text-white {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+/* Root container */
+.about-root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ms-white, #fff);
+  padding: 1rem;
+}
+
+/* Background card */
+.about-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 2.5rem;
+  background: linear-gradient(135deg, var(--ms-blue) 0%, var(--ms-card-gradient-2) 40%, var(--ms-white) 100%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  box-shadow: 0 0.5rem 2rem rgba(55, 65, 81, 0.08);
+}
+
+/* Close button */
+.about-close-btn {
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+  z-index: 10;
+  background: var(--ms-background, #222);
+  color: var(--ms-text, #fff);
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.15);
+  transition: background 0.2s, transform 0.2s;
+}
+.about-close-btn:hover, .about-close-btn:focus {
+  color: var(--ms-text, #fff);
+  transform: translateY(-0.2rem) scale(1.05);
+  box-shadow: 0 0.8rem 2.4rem var(--ms-blue, rgba(0, 120, 212, 0.2));
+}
+.about-close-icon {
+  font-size: 2rem;
+  line-height: 1;
+  color: inherit;
+  pointer-events: none;
+}
+
+/* Title */
+.about-title {
+  font-family: 'Custom4', sans-serif;
+  text-transform: uppercase;
+  color: var(--ms-text, #2a4365);
+  font-size: 10vw;
+  line-height: 1;
+  margin: 0;
+  position: absolute;
+  left: 2.5rem;
+  bottom: 1.5rem;
+  text-shadow: 0 0.2rem 0.8rem rgba(42, 67, 101, 0.08);
+}
+
+/* Content card */
+.about-content {
+  font-family: 'Custom3', sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  right: 4vw;
+  width: 55%;
+  color: var(--ms-text-color, #222);
+  border-radius: 1.5rem;
+  max-height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 3vh 2.5vw 3vh 2.5vw;
+  box-shadow: 0 0.2rem 0.8rem rgba(42, 67, 101, 0.08);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+}
+.about-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Section heading */
+.about-text {
+  font-size: 2.2rem;
+  line-height: 1.3;
+  color: var(--primary-color, #2a4365);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-shadow: 0 0.2rem 0.8rem rgba(42, 67, 101, 0.08);
+}
+
+/* Experience list (used for education too) */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+.experience-item {
+  margin-bottom: 1vh;
+  opacity: 0;
+  transform: translateY(3rem) scale(0.97) rotateX(8deg);
+  transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+  will-change: opacity, transform;
+}
+/* Simulate scroll-in effect using :nth-child for demo (CSS only) */
+.about-content .experience-item:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotateX(0deg);
+  transition-delay: 0.1s;
+}
+.about-content .experience-item:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotateX(0deg);
+  transition-delay: 0.25s;
+}
+.about-content .experience-item:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotateX(0deg);
+  transition-delay: 0.4s;
+}
+.about-content .experience-item:nth-child(4) {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotateX(0deg);
+  transition-delay: 0.55s;
+}
+.about-content .experience-item:nth-child(5) {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotateX(0deg);
+  transition-delay: 0.7s;
+}
+
+/* Accessibility: always allow keyboard scroll */
+.about-content:focus {
+  outline: 2px solid var(--primary-color, #2a4365);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+  .about-title {
+    font-size: 14vw;
+    left: 1.5rem;
+    bottom: 1rem;
+  }
+  .about-content {
+    width: 70%;
+    right: 1.5rem;
+    padding: 2rem 1.2rem 2rem 1.2rem;
+    top: 6rem;
+  }
+  .about-text {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-bg {
+    flex-direction: column;
+  }
+  .about-title {
+    font-size: 18vw;
+    left: 1rem;
+    bottom: 1rem;
+  }
+  .about-content {
+    width: 90%;
+    right: 1rem;
+    left: 1rem;
+    top: 5rem;
+    padding: 1.5rem 0.7rem 1.5rem 0.7rem;
+  }
+  .about-text {
+    font-size: 1.1rem;
+  }
+  .about-close-btn {
+    top: 1rem;
+    right: 1rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 22vw;
+    left: 0.5rem;
+    bottom: 0.5rem;
+  }
+  .about-content {
+    width: 98%;
+    right: 0.5rem;
+    left: 0.5rem;
+    top: 4rem;
+    padding: 1rem 0.2rem 1rem 0.2rem;
+  }
+  .about-text {
+    font-size: 1rem;
+  }
+} 

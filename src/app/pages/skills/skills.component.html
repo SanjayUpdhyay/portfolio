@@ -1,0 +1,20 @@
+<div class="about-root">
+  <div class="about-bg">
+    <button class="about-close-btn" (click)="closeDialog()" aria-label="Close dialog">
+      <span class="about-close-icon">&times;</span>
+    </button>
+    <h1 class="about-title">Skills</h1>
+    <div class="about-content">
+      <div class="skills-list">
+        <div *ngFor="let skill of skillsDetails" class="skill-group">
+          <h3 class="skill-type">{{ skill.SkillType }}</h3>
+          <div class="skill-items">
+            <div *ngFor="let item of skill.SkillName" class="skill-item">
+              <img [src]="item.Icon" [alt]="item.Skill" class="skill-icon">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 

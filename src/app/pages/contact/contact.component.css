@@ -1,0 +1,169 @@
+/* Contact Container */
+.contact-container {
+  height: 100vh;
+  position: relative;
+  padding: 1.75rem;
+  background: var(--ms-white);
+}
+
+.contact-background {
+  border-radius: 3.2rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(55, 65, 81, 0.3);
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background: url('src/assets/Img/Moon3.jpg') no-repeat center center;
+  background-size: cover;
+  background-color: var(--ms-black);
+  position: relative;
+}
+
+/* Contact Title */
+.contact-title {
+  font-family: 'Custom3';
+  font-size: 13rem;
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-left: 10rem;
+  color: var(--ms-text);
+}
+
+/* Contact Details Section */
+.contact-details-section {
+  font-family: 'Custom3';
+  text-transform: uppercase;
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  right: 2.5rem;
+  bottom: 1.5rem;
+  padding: 23rem 4.5rem;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-item {
+  font-size: 2.25rem;
+}
+
+.contact-label {
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+.contact-value {
+  color: var(--ms-text);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 90em) {
+  .contact-title {
+    font-size: 11rem;
+    margin-left: 8rem;
+  }
+  
+  .contact-details-section {
+    width: 55%;
+    padding: 20rem 4rem;
+  }
+  
+  .contact-item {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 75em) {
+  .contact-title {
+    font-size: 9rem;
+    margin-left: 6rem;
+  }
+  
+  .contact-details-section {
+    width: 60%;
+    padding: 18rem 3.5rem;
+  }
+  
+  .contact-item {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 64em) {
+  .contact-container {
+    padding: 1.5rem;
+  }
+  
+  .contact-title {
+    font-size: 7rem;
+    margin-left: 4rem;
+    margin-top: 1.5rem;
+  }
+  
+  .contact-details-section {
+    width: 65%;
+    padding: 15rem 3rem;
+    right: 2rem;
+  }
+  
+  .contact-item {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .contact-container {
+    padding: 1rem;
+  }
+  
+  .contact-background {
+    border-radius: 2rem;
+  }
+  
+  .contact-title {
+    font-size: 5rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .contact-details-section {
+    width: 70%;
+    padding: 10rem 2rem;
+    right: 1.5rem;
+  }
+  
+  .contact-item {
+    font-size: 1.25rem;
+  }
+  
+  .contact-list {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 30em) {
+  .contact-title {
+    font-size: 3.5rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .contact-details-section {
+    width: 80%;
+    padding: 8rem 1.5rem;
+    right: 1rem;
+  }
+  
+  .contact-item {
+    font-size: 1rem;
+  }
+  
+  .contact-list {
+    gap: 1rem;
+  }
+}

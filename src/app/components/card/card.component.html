@@ -1,0 +1,15 @@
+<div class="card-root">
+    <div class="card-header">
+        <div class="card-logo">
+            <img [src]="data.Logo || 'assets/Img/Moon3.jpg'" alt="Company Logo" class="card-logo-img">
+        </div>
+        <div class="card-info">
+            <p class="card-title">{{ data.CourseName }}</p>
+            <p class="card-subtitle">{{ data.Name }}</p>
+            <p class="card-year">{{ data.Year }}</p>
+        </div>
+    </div>
+    <div class="card-description">
+        <p [innerHTML]="getDescription()" class="card-description-text"></p>
+    </div>
+</div>

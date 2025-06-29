@@ -1,0 +1,31 @@
+<div class="about-root">
+  <div class="about-bg">
+    <button class="about-close-btn" (click)="closeDialog()" aria-label="Close dialog">
+      <span class="about-close-icon">&times;</span>
+    </button>
+    <h1 class="about-title">Projects</h1>
+    <div class="about-content">
+      <div class="experience-list">
+        <div *ngFor="let project of projectDetails" class="experience-item">
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-info">
+                <h3 class="project-title">{{ project.ProjecDetails.ProjectName }}</h3>
+                <p class="project-meta">{{ project.ProjecDetails.Year }} - {{ project.ProjecDetails.For }}</p>
+              </div>
+              <img [src]="(project.ProjectImage && project.ProjectImage[0]) || 'assets/logos/project-icon.png'" 
+                   [alt]="project.ProjecDetails.ProjectName" 
+                   class="project-image"
+                   (error)="onImageError($event)">
+            </div>
+            <p class="project-description" [innerHTML]="project.ProjecDetails.Description"></p>
+            <div class="project-tags">
+              <span class="project-type">{{ project.ProjectType }}</span>
+              <span *ngFor="let skill of project.ProjecDetails.ProjectSkills" class="project-skill">{{ skill }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 

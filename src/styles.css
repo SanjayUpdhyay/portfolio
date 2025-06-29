@@ -1,1 +1,484 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~remixicon/fonts/remixicon.css";
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'Custom';
+  src: url(./assets/fonts/file.woff2);
+}
+
+@font-face {
+  font-family: 'Custom1';
+  src: url(./assets/fonts/file2.woff2);
+}
+
+@font-face {
+  font-family: 'Custom2';
+  src: url(./assets/fonts/file3.woff2);
+}
+
+@font-face {
+  font-family: 'Custom3';
+  src: url(./assets/fonts/file4.woff2);
+}
+
+@font-face {
+  font-family: 'Custom4';
+  src: url(./assets/fonts/file5.woff2);
+}
+
+@font-face {
+  font-family: 'Custom5';
+  src: url(./assets/fonts/file6.woff2);
+}
+
+/* Theme Variables */
+:root {
+  --ms-white: #ffffff;
+  --ms-gray: #e6e6e6;
+  --ms-text: #333333;
+  --ms-blue: #0078d4;
+  --ms-dark-blue: #005a9e;
+  --ms-background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  --ms-background-icon: #121212;
+  --ms-button-text: #f7fafd;
+  --ms-card-gradient-1: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  --ms-card-gradient-2: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  --ms-card-gradient-3: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  --ms-card-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+  --ms-white: #1e1e1e;
+  --ms-gray: #333333;
+  --ms-text: #e6e6e6;
+  --ms-blue: #0078d4;
+  --ms-dark-blue: #005a9e;
+  --ms-background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+  --ms-background-icon: #1e1e1e;
+  --ms-button-text: #f7fafd;
+  --ms-card-gradient-1: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);
+  --ms-card-gradient-2: linear-gradient(135deg, #2d2d2d 0%, #333333 100%);
+  --ms-card-gradient-3: linear-gradient(135deg, #333333 0%, #404040 100%);
+  --ms-card-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+
+/* Global Styles */
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: var(--ms-background);
+  color: var(--ms-text);
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  color: var(--ms-text);
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.125em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--ms-blue);
+  color: var(--ms-button-text);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--ms-dark-blue);
+}
+
+.btn-secondary {
+  background-color: var(--ms-gray);
+  color: var(--ms-text);
+  border: 0.1em solid var(--ms-dark-gray);
+}
+
+.btn-secondary:hover {
+  background-color: #e6e6e6;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.font-[Custom3] {
+  font-family: 'Custom3', 'Poppins', sans-serif;
+}
+
+.h-screen {
+  min-height: 100vh;
+  height: 100vh;
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Card Styles */
+.card {
+  background: var(--ms-card-gradient-1);
+  border-radius: 1.2rem;
+  box-shadow: var(--ms-card-shadow);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.4rem 1.6rem rgba(0, 0, 0, 0.1);
+}
+
+.card-secondary {
+  background: var(--ms-card-gradient-2);
+}
+
+.card-tertiary {
+  background: var(--ms-card-gradient-3);
+}
+
+/* Responsive Typography and Utilities */
+@media (max-width: 75em) {
+
+  /* 1200px */
+  html {
+    font-size: 9.5px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.6em 1.2em;
+  }
+
+  .gap-4 {
+    gap: 0.75rem;
+  }
+
+  :root {
+    --ms-card-shadow: 0 0.15rem 0.8rem rgba(0, 0, 0, 0.04);
+  }
+
+  [data-theme="dark"] {
+    --ms-card-shadow: 0 0.15rem 0.8rem rgba(0, 0, 0, 0.16);
+  }
+}
+
+@media (max-width: 64em) {
+
+  /* 1024px */
+  html {
+    font-size: 9px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.5em 1em;
+  }
+
+  .gap-4 {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 48em) {
+
+  /* 768px */
+  html {
+    font-size: 8.5px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 0.4em 0.8em;
+  }
+
+  .gap-4 {
+    gap: 0.3rem;
+  }
+
+  :root {
+    --ms-card-shadow: 0 0.1rem 0.6rem rgba(0, 0, 0, 0.03);
+  }
+
+  [data-theme="dark"] {
+    --ms-card-shadow: 0 0.1rem 0.6rem rgba(0, 0, 0, 0.14);
+  }
+}
+
+@media (max-width: 30em) {
+
+  /* 480px */
+  html {
+    font-size: 8px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 0.3em 0.6em;
+  }
+
+  .gap-4 {
+    gap: 0.2rem;
+  }
+}
+
+@media (max-width: 90em) {
+
+  /* 1440px */
+  html {
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.7em 1.3em;
+  }
+
+  .gap-4 {
+    gap: 0.9rem;
+  }
+}
+
+.mat-dialog-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Material Dialog Customization */
+/* .about-dialog {
+  .mat-mdc-dialog-container {
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: transparent;
+  }
+
+  .mat-mdc-dialog-surface {
+    padding: 0 !important;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .mat-mdc-dialog-content {
+    padding: 0 !important;
+    margin: 0;
+    max-height: none;
+  }
+} */
+
+/* Dialog Backdrop
+.dialog-backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+} */
+
+/* Centered Dialog
+.centered-dialog {
+  .mat-mdc-dialog-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mat-mdc-dialog-surface {
+    margin: 0 auto;
+  }
+} */
+
+/* Material Icon Fixes */
+/* .mat-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+} */
+
+/* Responsive Dialog */
+/* @media screen and (max-width: 768px) {
+  .about-dialog {
+    .mat-mdc-dialog-container {
+      max-width: 95vw !important;
+      max-height: 95vh !important;
+    }
+  }
+} */
+
+.centered-mat-dialog .mat-dialog-container,
+.centered-mat-dialog .mat-mdc-dialog-container {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+  min-width: 32rem;
+  max-width: 80vw;
+  max-height: 80vh;
+  box-sizing: border-box;
+}
+
+/* Custom blurred dialog backdrop */
+.custom-dialog-backdrop,
+.cdk-overlay-backdrop.custom-dialog-backdrop {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  pointer-events: auto !important;
+  z-index: 1000 !important;
+}
+
+body .cdk-overlay-backdrop.custom-dialog-backdrop {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  pointer-events: auto !important;
+  z-index: 1000 !important;
+}
+
+/* Custom backdrop for About dialog with light blur effect */
+.about-dialog-backdrop {
+  background: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(12rem) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  pointer-events: auto !important;
+}

@@ -1,0 +1,15 @@
+<div class="about-root">
+  <div class="about-bg">
+    <button class="about-close-btn" (click)="closeDialog()" aria-label="Close dialog">
+      <span class="about-close-icon">&times;</span>
+    </button>
+    <h1 class="about-title">Experience</h1>
+    <div class="about-content">
+      <div class="experience-list">
+        <div *ngFor="let exp of experienceDetails" class="experience-item">
+          <app-card [data]="exp"></app-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 

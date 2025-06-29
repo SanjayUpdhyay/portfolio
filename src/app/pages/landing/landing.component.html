@@ -1,0 +1,48 @@
+<div class="landing-viewport">
+  <header class="landing-header">
+    <div class="header-left">
+      <h1 class="name">Sanjay Prasad Upadhyay</h1>
+    </div>
+    <div class="header-right">
+      <div class="theme-controls">
+        <button *ngFor="let mode of themeModes"
+                class="theme-btn"
+                [ngClass]="{'active': themeMode === mode.value}"
+                [title]="mode.label"
+                (click)="setThemeMode(mode.value)">
+          <i [class]="mode.icon + ' theme-icon'"></i>
+        </button>
+      </div>
+      <button class="btn btn-primary hire-btn" (click)="openLinkedInProfile()">Hire Me</button>
+    </div>
+  </header>
+  <div class="landing-content-row">
+    <main class="landing-main-area">
+      <div class="landing-main-grid">
+        <div class="main-card" (click)="openAboutDialog()">About</div>
+        <div class="main-card-side">
+          <div class="sidebar-card top" (click)="openSkillsDialog()">Skills</div>
+          <div class="sidebar-card middle" (click)="openExperienceDialog()">Experience</div>
+        </div>
+        <div class="main-card-bottom">
+          <div class="small-card left" (click)="openProjectsDialog()">Projects</div>
+          <div class="small-card right" (click)="openEducationDialog()">Education</div>
+        </div>
+      </div>
+    </main>
+    <aside class="landing-side-area">
+      <div class="social-icons">
+        <a *ngFor="let link of socialMediaLinks.slice(0, 3)" 
+           [href]="link.link" 
+           target="_blank" 
+           class="social-icon-wrapper">
+          <div class="social-icon">
+            <img [src]="'assets/Img/' + link.Name.toLowerCase() + '.svg'" 
+                 [alt]="link.Name" 
+                 class="social-icon-img">
+          </div>
+        </a>
+      </div>
+    </aside>
+  </div>
+</div>

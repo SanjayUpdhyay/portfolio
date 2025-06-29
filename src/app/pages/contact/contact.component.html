@@ -1,0 +1,21 @@
+<div class="contact-container">
+  <div class="contact-background">
+    
+    <!-- Contact Text (Vertical Alignment) -->
+    <h1 class="contact-title">
+      Contact
+    </h1>
+
+    <!-- Right Section with Contact Details -->
+    <div class="contact-details-section">
+      
+      <div class="contact-list">
+        <div *ngFor="let contact of contactDetails" class="contact-item">
+          <h3 class="contact-label">{{ contact.ContactName }}</h3>
+          <p class="contact-value">{{ contact.ContactDetails }}</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
